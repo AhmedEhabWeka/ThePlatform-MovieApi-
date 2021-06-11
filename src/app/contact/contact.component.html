@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-5">
+            <h2>Contact</h2>
+            <form  class="p-4 " [formGroup]='submitForm' (ngSubmit)='sendForm(submitForm)'>
+                
+                <input type="text" name="name" formControlName='name' class="form-control" placeholder="Please enter your name..." >
+                
+                
+                <input type="text" name="email" formControlName='email' class="form-control"  placeholder="Please enter your E-mail...">
+                
+                <input type="text" name="subject" formControlName='subject' class="form-control"  class="form-control"  placeholder="Please enter The subject..." >
+                
+                <textarea name="message" formControlName='message' class="form-control"  placeholder="Your message goes here..." rows="5" ></textarea>
+                
+                <div class="w-100  d-flex justify-content-end" >
+                    <button type="submit" class="btn btn-warning my-3 p-2 "  > Send</button>
+                
+                </div>
+                
+                </form>
+        </div>
+        <div class="col-md-4 mt-5">
+            <h2> Find Me On Socialmedia </h2>
+
+            <div class="socialMediaContainer">
+                <i class="fab fa-facebook-square"> <a href="https://www.facebook.com/AhmedEhabM" target="_blank">Facebook</a> </i>
+                <i class="fab fa-twitter-square"> <a href="https://twitter.com/AvengerAhmed" target="_blank">Twitter</a></i>
+                <i class="fab fa-instagram-square"><a href="https://www.instagram.com/ahmed.ihab58/" target="_blank">Instagram</a></i>
+                <i class="fab fa-linkedin"><a href="https://www.linkedin.com/in/ahmedehabweka/" target="_blank">LinkedIn</a></i>
+                <i class="fab fa-github-square"><a href="https://github.com/AhmedEhabWeka" target="_blank">Github</a></i>
+                <i class="fab fa-stack-overflow"><a href="https://stackoverflow.com/users/14638949/ahmed-ehab" target="_blank">StackOverflow</a></i>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.btn-warning{
+   
+    background-color:rgb(255,215,0) !important ;
+}
+
+.mt-5{
+    margin-top: 5% !important;
+}
+input{
+    background-color:#1e1b26 ;
+    
+    border-radius: 10px;
+    border-color: rgb(255,215,0) !important;
+    color:rgb(255,215,0) !important ;
+}
+
+label{
+    color:rgb(255,215,0) ;
+    padding: .4rem 0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255,215,0);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(255,215,0);
+  }
+
+  .form-control:focus{
+   background-color:#1e1b26 !important;
+   border-color: white !important;
+   box-shadow: inset 0 0 5px grey; 
+
+
+
+}

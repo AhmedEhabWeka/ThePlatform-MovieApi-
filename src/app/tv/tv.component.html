@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="search">
+        <span class="icon"> <img src="assets/images/search.png" alt=""></span>
+        <input type="text" class="form-control my-3" [(ngModel)]='term' placeholder="Search For Top Rated Series...">
+      </div>
+    
+    <h2 class="py-3 text-center" >Top Rated Series </h2>
+    <div class="w-100 d-flex justify-content-center">
+        <pagination-controls class="text-danger" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    
+    <div class="row">
+        
+        <div *ngFor=" let tv of topRatedTv| paginate: { itemsPerPage:4, currentPage: page,totalItems:totalRecords} |search:term" class="col-md-3">
+            <div class="tv   position-relative" [routerLink]="['/tvdetails',tv.id]" >
+                <div class="item-content">
+                    <img class="w-100" [src]="imgPrefix+tv.poster_path" alt="">
+                    <div class="circle  d-flex justify-content-center align-items-center">
+                        <h6 class="ratings">{{tv.vote_average}}<span><sub>/10</sub></span></h6>   
+                    </div>
+    
+                    <div class="item-overlay">
+                        <div class="text-center">
+                            <img src="assets/images/search--v2.png">
+                        </div>
+                        <div>
+                            <p class="text-center">Click for movie details</p>
+                        </div>
+                            
+                          
+                        
+                    </div>
+                   
+                </div>
+                
+                <h4 class="py-3">{{tv.title}}{{tv.name}}</h4>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+

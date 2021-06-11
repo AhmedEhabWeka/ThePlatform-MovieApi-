@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-4">
+            <img [src]="imgPrefix+tvDetails.poster_path" alt="" class="w-100">
+        </div>
+        <div class="col-md-8">
+            <div class="top">
+                <div class="title-container d-flex align-items-center justify-content-between">
+                    <h2>{{tvDetails?.name}}</h2>
+                    <div class="rating-container d-flex" >
+                        <div class="star-rating">
+                            <h3> <i class="fas fa-star"></i>  {{tvDetails?.vote_average}}<sub>/10</sub></h3>
+                        </div>
+                        <div class="star-vote">
+                            <h3> |{{tvDetails?.vote_count}} Votes </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-white  ">
+
+                    <span>Release Date :<span class="px-1">{{tvDetails?.first_air_date}}</span></span><span
+                        class="px-1">|</span><span>Language :<span
+                            class="px-1">{{tvDetails?.original_language}}</span></span>
+
+
+                </div>
+            </div>
+            <p class="text-muted">{{tvDetails?.overview}}</p>
+            <div class="mid">
+                <h3>Cast</h3>
+                <div class="creditContainer  ">
+                    <span class="row">
+                        <span *ngFor='let tvCredit of tvCredits' class="col-md-2 text-center ">
+                            <img [src]="imgPrefix+tvCredit.profile_path" alt="">
+                            <p class="text-white ">{{tvCredit?.name}}</p>
+                        </span>
+                    </span>
+
+                </div>
+            </div>
+
+
+
+            <!-- --------------------------------- -->
+
+            <div class="icon-wrapper w-75">
+                <div class="icon-container d-flex justify-content-between">
+                    <div class="buttons ">
+                        <button class="btn btn-outline-danger p-2" [ngClass]='{"disabled": trailerNotFound}'>
+                            <span class="fas fa-play"></span>
+                            <span class=" aContainer px-2 text-danger">
+                                <a class=" text-danger" [href]="trailerUrl" target="_blank">Watch Trailer</a></span>
+                        </button>
+                        <div *ngIf=' trailerNotFound' class="text-white"> Sorry this trailer not available in your country!</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- --------------------------- -->
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="row py-5">
+        <div class="col-md-4">
+            <img [src]="imgPrefix+tvDetails.poster_path" alt="" class="w-100">
+        </div>
+        <div class="col-md-8">
+            <h2>{{tvDetails?.name}}</h2>
+            <div class="text-white pb-3">
+                <span>First-Air Date :<span class="px-1">{{tvDetails?.first_air_date}}</span></span><span class="px-1">|</span><span>Language :<span class="px-1">{{tvDetails?.original_language}}</span></span>
+            </div>
+            <p class="text-muted">{{tvDetails?.overview}}</p>
+            <h3>Cast</h3>
+            <div class="creditContainer  ">
+                <span class="row">
+                    <span *ngFor='let tvCredit of tvCredits' class="col-md-2 text-center ">
+                        <img [src]="imgPrefix+tvCredit.profile_path" alt="">
+                        <p  class="text-white ">{{tvCredit?.name}}</p> 
+                    </span>
+                </span>
+               
+                
+            
+            </div>
+
+        </div>
+    </div>
+</div> -->

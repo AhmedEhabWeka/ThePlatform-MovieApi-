@@ -1,0 +1,29 @@
+footer{
+    height: 200px;
+    width: 100%;
+    /* background-color: #4F4D53; */
+    background-color: #131118;
+    position: relative;
+    bottom: 0;
+    left:0;
+   
+}
+.footer{
+    height: 200px;
+    width: 100%;
+}
+
+footer::before{
+    content: "";
+    background-color:#E8BE02 ;
+    width: 100%;
+    height: 12px;
+    position: absolute;
+   
+}
+
+.copyright{
+    font-size: 2rem;
+    font-family: 'Odibee Sans', 'cursive';
+    color: rgb(255,215,0);
+}

@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="search">
+        <span class="icon"> <img src="assets/images/search.png" alt=""></span>
+        <input type="text" class="form-control my-3" [(ngModel)]='term' placeholder="Search For Trending Movies,Series...">
+      </div>
+    
+    <h2 class="py-3 text-center" >Trending Movies </h2>
+    
+    <div class="row">
+        
+        <div *ngFor=" let movie of trendingMovies|search:term" class="col-md-3">
+            <div class="movie  position-relative" [routerLink]="['/moviedetails',movie.id]" >
+                <div class="item-content">
+                    <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+                    <div class="circle  d-flex justify-content-center align-items-center">
+                        <h6 class="ratings">{{movie.vote_average}}<span><sub>/10</sub></span></h6>   
+                    </div>
+
+                    <div class="item-overlay">
+                        <div class="text-center">
+                            <img src="assets/images/search--v2.png">
+                        </div>
+                        <div>
+                            <p class="text-center">Click for movie details</p>
+                        </div>
+                            
+                          
+                        
+                    </div>
+                </div>
+                
+                <h4 class="py-3">{{movie.title}}{{movie.name}}</h4>
+                
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <h2 class="py-3 text-center">Trending Series </h2>
+    
+    <div class="row">
+        <div *ngFor=" let tv of trendingTV|search:term" class="col-md-3">
+            <div class="tv  position-relative " [routerLink]="['/tvdetails',tv.id]">
+                <div class="item-content">
+                    <img class="w-100" [src]="imgPrefix+tv.poster_path" alt="">
+                    <div class="circle  d-flex justify-content-center align-items-center">
+                        <h6 class="ratings">{{tv.vote_average}}<span><sub>/10</sub></span></h6>
+                    </div>
+
+                    <div class="item-overlay">
+                        <div class="text-center">
+                            <img src="assets/images/search--v2.png">
+                        </div>
+                        <div>
+                            <p class="text-center">Click for series details</p>
+                        </div>
+                            
+                          
+                        
+                    </div>
+                    
+                </div>
+                
+                <h4 class="py-3">{{tv.title}}{{tv.name}}</h4>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

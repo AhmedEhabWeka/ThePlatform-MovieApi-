@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-4">
+            <img [src]="imgPrefix+peopleDetails.profile_path" alt="" class="w-100">
+        </div>
+        <div class="col-md-8">
+            <div class="top">
+                <div class="title-container d-flex align-items-center justify-content-between">
+                    <h2>{{peopleDetails?.name}}</h2>
+                    <div class="rating-container d-flex" >
+                        <div class="star-rating">
+                            <h3> <i class="fas fa-star"></i> Popularity |  {{peopleDetails?.popularity}}</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="text-white  ">
+
+                    <span>Birthday:<span class="px-1">{{peopleDetails?.birthday}}</span></span><span
+                        class="px-1">|</span><span>Place Of Birth :<span
+                            class="px-1">{{peopleDetails?.place_of_birth}}</span></span>
+
+
+                </div>
+            </div>
+            <p class="text-muted">{{peopleDetails?.biography}}</p>
+           
+            <button class="btn btn-warning"><a [href]='imdbUrl' target="_blank"> <strong>IMDB</strong> Profile</a></button>
+
+
+
+        </div>
+
+
+    </div>
+</div>

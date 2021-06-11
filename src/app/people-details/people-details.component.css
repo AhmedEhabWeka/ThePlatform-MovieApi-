@@ -1,0 +1,166 @@
+h2{
+    color: rgb(255,215,0);
+    font-family: 'Odibee Sans', 'cursive';
+    font-size: 3rem;
+    
+}
+h3{
+    color: rgb(255,215,0);
+    font-family: 'Odibee Sans', 'cursive';
+    font-size: 2rem;
+    padding: 0 .3rem ;
+}
+
+p{
+   font-size: 1.3rem; 
+   font-family: 'Roboto', sans-serif;
+   font-weight:400;
+   font-style:italic;
+}
+
+
+
+
+
+button{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition:  color .15s ease-in-out;
+    font-size: 1.1rem;
+}
+
+
+
+.col-md-8{
+    height: 618px !important;
+    display: flex !important;
+    flex-direction: column  !important;
+    justify-content: space-between !important;
+    overflow: auto;
+}
+
+@media screen and (min-width: 1200px) and (max-width:1399px)
+ {
+
+    .col-md-8{
+        height: 527px !important;
+        overflow: auto;
+    }
+
+    p{
+        font-size: 1rem; 
+      
+     }
+
+     h2{
+       
+        font-size: 2.5rem;
+        
+    }
+
+    h3{
+    
+        font-size: 1.5rem;
+        
+    }
+ }
+
+ @media screen and (min-width: 992px) and (max-width:1199px)
+ {
+
+  
+    .col-md-4 > img{
+        height: 527px!important ;
+        
+    }
+    .col-md-8{
+        height: 527px !important;
+        overflow: auto;
+      
+    }
+    p{
+        font-size: .9rem; 
+      
+     }
+
+     h2{
+       
+        font-size: 2rem;
+        
+    }
+
+    h3{
+    
+        font-size: 1.5rem;
+        
+    }
+ }
+
+ @media screen and (min-width: 768px) and (max-width:991px)
+ {  
+
+    
+    .col-md-4 > img{
+        height: 410px!important ;
+        
+    }
+
+    .col-md-8{
+        height: 410px !important;
+        overflow: auto;
+      
+    }
+    p{
+        font-size: .8rem; 
+      
+     }
+
+     h2{
+       
+        font-size: 1.5rem;
+        
+    }
+
+    h3{
+    
+        font-size: 1rem;
+        
+    }
+ }
+
+ @media screen and  (max-width:767px)
+ {  
+    .col-md-8{
+        overflow: auto;
+        margin-top: .5rem;
+    }
+  
+    p{
+        font-size: 1rem; 
+      
+     }
+
+     h2{
+       
+        font-size: 1.3rem;
+        
+    }
+
+    h3{
+    
+        font-size: 1.2rem;
+        
+    }
+
+    .text-white{
+        font-size: .8rem !important;
+    }
+
+   
+    
+ }

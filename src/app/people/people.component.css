@@ -1,0 +1,67 @@
+h4{
+    color: rgb(255,215,0);
+    /* color: rgb(206, 175, 0); */
+    text-align: center;
+    font-family: 'Odibee Sans', 'cursive';
+    text-decoration: overline underline;
+    font-size: 1.5rem;
+    
+}
+
+h2{
+    color: white;
+    font-family: 'Odibee Sans', 'cursive';
+    font-size: 3rem;
+}
+
+
+
+
+.item-content
+{
+	position: relative;
+    cursor: pointer;
+}
+
+.item-overlay
+{
+	background-color: rgba(255,215,0,.705);
+	position: absolute;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s linear;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+
+.item-content:hover .item-overlay
+{
+	height: 100%;
+	
+}
+
+.item-overlay h2
+{
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.item-overlay p
+{
+	font-size: 1rem;
+	font-weight: 900;
+}
+.item-overlay img{
+    width: 7rem;
+    height: 7rem;
+    border:none;
+}
+
+

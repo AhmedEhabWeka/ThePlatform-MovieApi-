@@ -1,0 +1,28 @@
+
+    <h2 class="py-3 text-center" >Popular Actors </h2>
+    
+    <div class="row">
+        
+        <div *ngFor=" let people of popularPeople" class="col-md-3">
+            <div class="people  position-relative" [routerLink]="['/peopledetails',people.id]" >
+                <div class="item-content">
+                    <img class="w-100" [src]="imgPrefix+people.profile_path" alt="">
+
+                    <div class="item-overlay">
+                        <div class="text-center">
+                            <img src="assets/images/search--v2.png">
+                        </div>
+                        <div>
+                            <p class="text-center">Click for details</p>
+                        </div>
+                            
+                          
+                        
+                    </div>
+                </div>
+                
+                <h4 class="py-3">{{people.name}}</h4>
+                
+            </div>
+        </div>
+    </div>
