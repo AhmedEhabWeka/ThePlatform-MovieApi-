@@ -11,7 +11,7 @@
         <div *ngFor=" let movie of trendingMovies|search:term" class="col-md-3">
             <div class="movie  position-relative" [routerLink]="['/moviedetails',movie.id]" >
                 <div class="item-content">
-                    <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+                    <img class="w-100" [src]="imgPrefix+movie.poster_path" (error) ="onImgError($event)" alt="">
                     <div class="circle  d-flex justify-content-center align-items-center">
                         <h6 class="ratings">{{movie.vote_average}}<span><sub>/10</sub></span></h6>   
                     </div>
@@ -42,7 +42,7 @@
         <div *ngFor=" let tv of trendingTV|search:term" class="col-md-3">
             <div class="tv  position-relative " [routerLink]="['/tvdetails',tv.id]">
                 <div class="item-content">
-                    <img class="w-100" [src]="imgPrefix+tv.poster_path" alt="">
+                    <img class="w-100" [src]="imgPrefix+tv.poster_path" (error) ="onImgError($event)" alt="">
                     <div class="circle  d-flex justify-content-center align-items-center">
                         <h6 class="ratings">{{tv.vote_average}}<span><sub>/10</sub></span></h6>
                     </div>

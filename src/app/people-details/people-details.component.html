@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row py-5">
         <div class="col-md-4">
-            <img [src]="imgPrefix+peopleDetails.profile_path" alt="" class="w-100">
+            <img [src]="imgPrefix+peopleDetails.profile_path" (error) ="onImgError($event)" alt="" class="w-100">
         </div>
         <div class="col-md-8">
             <div class="top">

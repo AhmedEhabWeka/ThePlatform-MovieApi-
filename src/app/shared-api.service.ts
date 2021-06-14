@@ -38,12 +38,12 @@ export class SharedApiService {
     return this._HttpClient.get(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=866cd3a065ef9304a549f1d65e494940`);
   }
 
-  getTopRated(mediatype:string,pageNum:number):Observable<any>{
-    return this._HttpClient.get(`https://api.themoviedb.org/3/${mediatype}/top_rated?api_key=866cd3a065ef9304a549f1d65e494940&page=${pageNum}`)
+  getTopRated(mediatype:string,i:number):Observable<any>{
+    return this._HttpClient.get(`https://api.themoviedb.org/3/${mediatype}/top_rated?api_key=866cd3a065ef9304a549f1d65e494940&page=${i}`)
   }
 
-  getPeople():Observable<any>{
-    return this._HttpClient.get(`https://api.themoviedb.org/3/person/popular?api_key=866cd3a065ef9304a549f1d65e494940&`)
+  getPeople(i:number):Observable<any>{
+    return this._HttpClient.get(`https://api.themoviedb.org/3/person/popular?api_key=866cd3a065ef9304a549f1d65e494940&page=${i}`)
   }
   getPeopleDetails(id:any):Observable<any>{
     return this._HttpClient.get(`https://api.themoviedb.org/3/person/${id}?api_key=866cd3a065ef9304a549f1d65e494940`)

@@ -6,15 +6,15 @@
     
     <h2 class="py-3 text-center" >Top Rated Movies </h2>
     <div class="w-100 d-flex justify-content-center">
-        <pagination-controls class="text-danger" (pageChange)="page = $event"></pagination-controls>
+        <pagination-controls class="text-danger" (pageChange)="onPageChange($event)"></pagination-controls>
     </div>
     
     <div class="row">
         
-        <div *ngFor=" let movie of topRatedMovies| paginate: { itemsPerPage:4, currentPage: page,totalItems:totalRecords} |search:term" class="col-md-3">
+        <div *ngFor=" let movie of topRatedMovies| paginate:config |search:term" class="col-md-3">
             <div class="movie  position-relative" [routerLink]="['/moviedetails',movie.id]" >
                 <div class="item-content">
-                    <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="">
+                    <img class="w-100" [src]="imgPrefix+movie.poster_path" (error) ="onImgError($event)" alt="">
                     <div class="circle  d-flex justify-content-center align-items-center">
                         <h6 class="ratings">{{movie.vote_average}}<span><sub>/10</sub></span></h6>   
                     </div>

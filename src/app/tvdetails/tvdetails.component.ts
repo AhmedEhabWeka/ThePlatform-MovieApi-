@@ -45,4 +45,9 @@ export class TvdetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onImgError(event:any) { 
+    event.target.src = 'assets/images/noimage2.png';
+  }
+  
+
 }

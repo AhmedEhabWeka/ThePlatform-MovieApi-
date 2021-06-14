@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row py-5">
         <div class="col-md-4">
-            <img [src]="imgPrefix+movieDetails.poster_path" alt="" class="w-100">
+            <img [src]="imgPrefix+movieDetails.poster_path" (error) ="onImgError($event)"  alt="" class="w-100">
         </div>
         <div class="col-md-8">
             <div class="top">
@@ -32,7 +32,7 @@
                 <div class="creditContainer  ">
                     <span class="row">
                         <span *ngFor='let movieCredit of movieCredits' class="col-md-2 text-center ">
-                            <img [src]="imgPrefix+movieCredit.profile_path" alt="">
+                            <img [src]="imgPrefix+movieCredit.profile_path" (error) ="onImgError($event)"  alt="">
                             <p class="text-white ">{{movieCredit?.name}}</p>
                         </span>
                     </span>

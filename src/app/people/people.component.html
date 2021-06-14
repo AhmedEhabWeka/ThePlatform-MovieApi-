@@ -1,12 +1,16 @@
 
     <h2 class="py-3 text-center" >Popular Actors </h2>
+
+    <div class="w-100 d-flex justify-content-center">
+        <pagination-controls class="text-danger" (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
     
     <div class="row">
         
-        <div *ngFor=" let people of popularPeople" class="col-md-3">
+        <div *ngFor=" let people of popularPeople |paginate:config" class="col-md-3">
             <div class="people  position-relative" [routerLink]="['/peopledetails',people.id]" >
                 <div class="item-content">
-                    <img class="w-100" [src]="imgPrefix+people.profile_path" alt="">
+                    <img class="w-100" [src]="imgPrefix+people.profile_path" (error) ="onImgError($event)" alt="">
 
                     <div class="item-overlay">
                         <div class="text-center">
