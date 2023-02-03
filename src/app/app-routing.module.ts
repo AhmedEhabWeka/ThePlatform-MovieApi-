@@ -16,12 +16,12 @@ import { ThanksComponent } from './thanks/thanks.component';
 
 const routes: Routes = [
   {path:"",redirectTo:'home',pathMatch:'full'},
-  {path:'home',canActivate:[AuthguardGuard], component:HomeComponent},
-  {path:'movies',canActivate:[AuthguardGuard], component:MoviesComponent},
-  {path:'people', canActivate:[AuthguardGuard], component:PeopleComponent},
-  {path:'tv', canActivate:[AuthguardGuard], component:TvComponent},
-  {path:'contact', canActivate:[AuthguardGuard], component:ContactComponent},
-  {path:'thanks', canActivate:[AuthguardGuard], component:ThanksComponent},
+  {path:'home', component:HomeComponent},
+  {path:'movies', component:MoviesComponent},
+  {path:'people',  component:PeopleComponent},
+  {path:'tv',  component:TvComponent},
+  {path:'contact',  component:ContactComponent},
+  {path:'thanks',  component:ThanksComponent},
   {path:'moviedetails/:id', component:MoviedetailsComponent},
   {path:'tvdetails/:id', component:TvdetailsComponent},
   {path:'peopledetails/:id', component:PeopleDetailsComponent},
