@@ -12,6 +12,10 @@ nav ,.dropdown-menu{
     
 }
 
+.container-fluid{
+    flex-wrap: nowrap !important;
+}
+
 
 
 

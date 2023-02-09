@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedApiService } from '../shared-api.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 @Component({
@@ -8,6 +9,28 @@ import { SharedApiService } from '../shared-api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  customOptions: OwlOptions = {
+    loop: true,
+    // rewind: true,
+    items:3,   
+    // mouseDrag: true,
+    // touchDrag: true,
+    // pullDrag: true,
+    autoWidth: false,
+    navSpeed: 700,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    autoplaySpeed: 1500,
+    animateIn: true,
+    animateOut: true,
+    dots: false,
+    dotsSpeed: 700,
+    slideBy: 'page',
+    slideTransition: 'ease-out',
+  }
+
   trendingMovies:any[]=[];
   trendingTV:any[]=[];
   imgPrefix:string=`https://image.tmdb.org/t/p/w500`;
@@ -43,6 +66,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  roundRating(rating:any){
+    rating = Number(rating).toFixed(1)
+    
+    return rating
+    }
 
   onImgError(event:any) { 
     event.target.src = 'assets/images/noimage2.png';

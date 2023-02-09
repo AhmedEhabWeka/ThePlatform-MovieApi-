@@ -9,7 +9,7 @@
                     <h2>{{tvDetails?.name}}</h2>
                     <div class="rating-container d-flex" >
                         <div class="star-rating">
-                            <h3> <i class="fas fa-star"></i>  {{tvDetails?.vote_average}}<sub>/10</sub></h3>
+                            <h3> <i class="fas fa-star"></i>  {{roundRating(tvDetails?.vote_average)}}<sub>/10</sub></h3>
                         </div>
                         <div class="star-vote">
                             <h3> |{{tvDetails?.vote_count}} Votes </h3>

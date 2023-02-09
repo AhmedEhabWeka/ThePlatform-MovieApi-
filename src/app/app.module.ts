@@ -19,7 +19,9 @@ import { PeopleComponent } from './people/people.component';
 import { PeopleDetailsComponent } from './people-details/people-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { ThanksComponent } from './thanks/thanks.component';
-
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,10 @@ import { ThanksComponent } from './thanks/thanks.component';
     FormsModule,
     ReactiveFormsModule,
     RegisterationModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -43,6 +43,11 @@ export class MoviesComponent implements OnInit {
     this.config.currentPage = number;
 }
 
+roundRating(rating:any){
+rating = Number(rating).toFixed(1)
+
+return rating
+}
 onImgError(event:any) { 
   event.target.src = 'assets/images/noimage2.png';
 }

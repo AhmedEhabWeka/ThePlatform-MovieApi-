@@ -9,9 +9,17 @@ h4{
 }
 
 h2{
-    color: white;
+    color: rgb(175 175 175);
     font-family: 'Odibee Sans', 'cursive';
     font-size: 3rem;
+    display: flex;
+}
+
+h2 span{
+    text-decoration: underline;
+    opacity: .5;
+    margin-inline-start: .5rem;
+    color: rgb(255,215,0);
 }
 
 .form-control{
@@ -69,6 +77,14 @@ h2{
 {
 	position: relative;
     cursor: pointer;
+    margin-inline-end: 1rem;
+    
+
+}
+
+.item-content img{
+    /* height: calc(100vh - (18rem)); */
+    height: 450px;
 }
 
 .item-overlay

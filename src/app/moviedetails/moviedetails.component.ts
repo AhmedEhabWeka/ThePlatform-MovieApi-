@@ -50,4 +50,9 @@ export class MoviedetailsComponent implements OnInit {
     event.target.src = 'assets/images/noimage2.png';
   }
 
+  roundRating(rating:any){
+    rating = Number(rating).toFixed(1)
+    return rating
+    }
+
 }

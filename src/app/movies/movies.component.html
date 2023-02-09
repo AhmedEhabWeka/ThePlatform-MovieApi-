@@ -16,7 +16,7 @@
                 <div class="item-content">
                     <img class="w-100" [src]="imgPrefix+movie.poster_path" (error) ="onImgError($event)" alt="">
                     <div class="circle  d-flex justify-content-center align-items-center">
-                        <h6 class="ratings">{{movie.vote_average}}<span><sub>/10</sub></span></h6>   
+                        <h6 class="ratings">{{roundRating(movie.vote_average)}}<span><sub>/10</sub></span></h6>   
                     </div>
     
                     <div class="item-overlay">

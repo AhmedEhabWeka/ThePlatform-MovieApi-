@@ -9,7 +9,7 @@
                     <h2>{{movieDetails?.title}}</h2>
                     <div class="rating-container d-flex" >
                         <div class="star-rating">
-                            <h3> <i class="fas fa-star"></i>  {{movieDetails?.vote_average}}<sub>/10</sub></h3>
+                            <h3> <i class="fas fa-star"></i>  {{roundRating(movieDetails?.vote_average)}}<sub>/10</sub></h3>
                         </div>
                         <div class="star-vote">
                             <h3> |{{movieDetails?.vote_count}} Votes </h3>
